@@ -16,18 +16,18 @@
 
 package org.apache.jasper.compiler;
 
-import javax.tools.DiagnosticCollector;
-import javax.tools.Diagnostic;
-import javax.tools.FileObject;
-import javax.tools.ToolProvider;
-import javax.tools.JavaFileManager;
-import javax.tools.JavaFileManager.Location;
-import javax.tools.JavaFileObject;
-import javax.tools.JavaFileObject.Kind;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ForwardingJavaFileManager;
-import javax.tools.StandardJavaFileManager;
-import javax.tools.StandardLocation;
+import jakarta.tools.DiagnosticCollector;
+import jakarta.tools.Diagnostic;
+import jakarta.tools.FileObject;
+import jakarta.tools.ToolProvider;
+import jakarta.tools.JavaFileManager;
+import jakarta.tools.JavaFileManager.Location;
+import jakarta.tools.JavaFileObject;
+import jakarta.tools.JavaFileObject.Kind;
+import jakarta.tools.SimpleJavaFileObject;
+import jakarta.tools.ForwardingJavaFileManager;
+import jakarta.tools.StandardJavaFileManager;
+import jakarta.tools.StandardLocation;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -179,7 +179,7 @@ public class Jsr199JavaCompiler implements JavaCompiler {
         final String source = charArrayWriter.toString();
         classFiles = new ArrayList<BytecodeFile>();
 
-        javax.tools.JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
+        jakarta.tools.JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
         if (javac == null) {
             errDispatcher.jspError("jsp.error.nojdk");
         }
@@ -208,7 +208,7 @@ public class Jsr199JavaCompiler implements JavaCompiler {
         }
 
         JavaFileManager javaFileManager = getJavaFileManager(stdFileManager);
-        javax.tools.JavaCompiler.CompilationTask ct =
+        jakarta.tools.JavaCompiler.CompilationTask ct =
             javac.getTask(null,
                           javaFileManager,
                           diagnostics,

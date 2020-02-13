@@ -39,9 +39,9 @@ import java.util.concurrent.atomic.*;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.jsp.JspFactory;
-import javax.tools.JavaFileObject;
+import jakarta.tools.JavaFileObject;
 
 import org.apache.jasper.Constants;
 import org.apache.jasper.JspCompilationContext;

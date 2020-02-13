@@ -18,10 +18,10 @@
 package org.apache.jasper.runtime;
 
 import java.util.HashMap;
-import javax.el.ELContext;
-import javax.el.ELResolver;
-import javax.el.VariableMapper;
-import javax.el.ValueExpression;
+import jakarta.el.ELContext;
+import jakarta.el.ELResolver;
+import jakarta.el.VariableMapper;
+import jakarta.el.ValueExpression;
 
 
 /**

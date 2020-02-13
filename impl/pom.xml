@@ -250,7 +250,7 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
-                    <include>javax.servlet.ServletContainerInitializer</include>
+                    <include>jakarta.servlet.ServletContainerInitializer</include>
                 </includes>
                 <targetPath>META-INF/services</targetPath>
             </resource>
@@ -290,14 +290,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.el</artifactId>
+            <artifactId>jakarta.el</artifactId>
             <version>[3.0.1-b10,)</version>
         </dependency>
         <dependency>

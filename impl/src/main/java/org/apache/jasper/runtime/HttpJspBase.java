@@ -25,8 +25,8 @@ import java.net.URL;
 import java.net.MalformedURLException;
 import java.util.List;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 import jakarta.servlet.jsp.*;
 
 import org.apache.jasper.JasperException;

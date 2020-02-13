@@ -110,10 +110,10 @@ public class Constants {
      * Servlet context and request attributes that the JSP engine
      * uses. 
      */
-    public static final String INC_REQUEST_URI = "javax.servlet.include.request_uri";
-    public static final String INC_SERVLET_PATH = "javax.servlet.include.servlet_path";
-    public static final String TMP_DIR = "javax.servlet.context.tempdir";
-    public static final String FORWARD_SEEN = "javax.servlet.forward.seen";
+    public static final String INC_REQUEST_URI = "jakarta.servlet.include.request_uri";
+    public static final String INC_SERVLET_PATH = "jakarta.servlet.include.servlet_path";
+    public static final String TMP_DIR = "jakarta.servlet.context.tempdir";
+    public static final String FORWARD_SEEN = "jakarta.servlet.forward.seen";
     public static final String FIRST_REQUEST_SEEN = "jspx.1st.request";
 
     // Must be kept in sync with org/apache/catalina/Globals.java
@@ -126,19 +126,19 @@ public class Constants {
     public static final String TAGLIB_DTD_PUBLIC_ID_11 = 
 	"-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN";
     public static final String TAGLIB_DTD_RESOURCE_PATH_11 = 
-	"/javax/servlet/jsp/resources/web-jsptaglibrary_1_1.dtd";
+	"/jakarta/servlet/jsp/resources/web-jsptaglibrary_1_1.dtd";
     public static final String TAGLIB_DTD_PUBLIC_ID_12 = 
 	"-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN";
     public static final String TAGLIB_DTD_RESOURCE_PATH_12 = 
-	"/javax/servlet/jsp/resources/web-jsptaglibrary_1_2.dtd";
+	"/jakarta/servlet/jsp/resources/web-jsptaglibrary_1_2.dtd";
     public static final String TAGLIB_SCHEMA_PUBLIC_ID_20 =
         "web-jsptaglibrary_2_0.xsd";
     public static final String TAGLIB_SCHEMA_RESOURCE_PATH_20 =
-        "/javax/servlet/jsp/resources/web-jsptaglibrary_2_0.xsd";
+        "/jakarta/servlet/jsp/resources/web-jsptaglibrary_2_0.xsd";
     public static final String TAGLIB_SCHEMA_PUBLIC_ID_21 =
         "web-jsptaglibrary_2_1.xsd";
     public static final String TAGLIB_SCHEMA_RESOURCE_PATH_21 =
-        "/javax/servlet/jsp/resources/web-jsptaglibrary_2_1.xsd";
+        "/jakarta/servlet/jsp/resources/web-jsptaglibrary_2_1.xsd";
     public static final String SCHEMA_LOCATION_JSP_20
         = "http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd";
     public static final String SCHEMA_LOCATION_JSP_21
@@ -151,19 +151,19 @@ public class Constants {
     public static final String WEBAPP_DTD_PUBLIC_ID_22 = 
 	"-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN";
     public static final String WEBAPP_DTD_RESOURCE_PATH_22 = 
-	"/javax/servlet/resources/web-app_2_2.dtd";
+	"/jakarta/servlet/resources/web-app_2_2.dtd";
     public static final String WEBAPP_DTD_PUBLIC_ID_23 = 
 	"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN";
     public static final String WEBAPP_DTD_RESOURCE_PATH_23 = 
-	"/javax/servlet/resources/web-app_2_3.dtd";
+	"/jakarta/servlet/resources/web-app_2_3.dtd";
     public static final String WEBAPP_SCHEMA_PUBLIC_ID_24 =
         "web-app_2_4.xsd";
     public static final String WEBAPP_SCHEMA_RESOURCE_PATH_24 =
-        "/javax/servlet/resources/web-app_2_4.xsd";
+        "/jakarta/servlet/resources/web-app_2_4.xsd";
     public static final String WEBAPP_SCHEMA_PUBLIC_ID_25 =
         "web-app_2_5.xsd";
     public static final String WEBAPP_SCHEMA_RESOURCE_PATH_25 =
-        "/javax/servlet/resources/web-app_2_5.xsd";
+        "/jakarta/servlet/resources/web-app_2_5.xsd";
     public static final String SCHEMA_LOCATION_WEBAPP_24
         = "http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd";
     public static final String SCHEMA_LOCATION_WEBAPP_25

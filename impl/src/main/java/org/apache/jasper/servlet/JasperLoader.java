@@ -30,7 +30,7 @@ import java.security.PrivilegedExceptionAction;
 import java.security.ProtectionDomain;
 import java.util.Map;
 
-import javax.servlet.http.*;
+import jakarta.servlet.http.*;
 
 import org.apache.jasper.JasperException;
 import org.apache.jasper.Constants;

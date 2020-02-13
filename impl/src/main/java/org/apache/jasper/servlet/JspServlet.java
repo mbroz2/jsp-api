@@ -36,12 +36,12 @@ import java.util.StringTokenizer;
 // START GlassFish 747
 import java.util.HashMap;
 // END GlassFish 747
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 // START GlassFish 750
 import jakarta.servlet.jsp.tagext.TagLibraryInfo;
 // END GlassFish 750
@@ -298,10 +298,10 @@ public class JspServlet extends HttpServlet {
                 /*
 		 * Requested JSP has been target of
                  * RequestDispatcher.include(). Its path is assembled from the
-                 * relevant javax.servlet.include.* request attributes
+                 * relevant jakarta.servlet.include.* request attributes
                  */
                 String pathInfo = (String) request.getAttribute(
-                                    "javax.servlet.include.path_info");
+                                    "jakarta.servlet.include.path_info");
                 if (pathInfo != null) {
                     jspUri += pathInfo;
                 }
@@ -402,7 +402,7 @@ public class JspServlet extends HttpServlet {
                     if (null == context.getResource(jspUri)
                             && !options.getUsePrecompiled()) {
                         String includeRequestUri = (String) 
-                            request.getAttribute("javax.servlet.include.request_uri");
+                            request.getAttribute("jakarta.servlet.include.request_uri");
                         if (includeRequestUri != null) {
                             // Missing JSP resource has been the target of a
                             // RequestDispatcher.include().

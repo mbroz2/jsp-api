@@ -33,8 +33,8 @@ import java.security.AccessController;
 import jakarta.servlet.jsp.tagext.TagFileInfo;
 import jakarta.servlet.jsp.tagext.TagInfo;
 import jakarta.servlet.jsp.tagext.TagLibraryInfo;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
+import jakarta.xml.parsers.SAXParser;
+import jakarta.xml.parsers.SAXParserFactory;
 
 import org.apache.jasper.JasperException;
 import org.apache.jasper.Constants;

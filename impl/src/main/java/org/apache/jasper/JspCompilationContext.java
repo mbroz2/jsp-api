@@ -25,7 +25,7 @@ import java.net.URLClassLoader;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Set;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.jsp.tagext.TagInfo;
 import jakarta.servlet.jsp.tagext.TagLibraryInfo;
 

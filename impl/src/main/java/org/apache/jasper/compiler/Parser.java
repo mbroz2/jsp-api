@@ -64,12 +64,12 @@ class Parser implements TagConstants {
 
     // Virtual body content types, to make parsing a little easier.
     // These are not accessible from outside the parser.
-    private static final String JAVAX_BODY_CONTENT_PARAM = 
-        "JAVAX_BODY_CONTENT_PARAM";
-    private static final String JAVAX_BODY_CONTENT_PLUGIN = 
-        "JAVAX_BODY_CONTENT_PLUGIN";
-    private static final String JAVAX_BODY_CONTENT_TEMPLATE_TEXT = 
-        "JAVAX_BODY_CONTENT_TEMPLATE_TEXT";
+    private static final String JAKARTA_BODY_CONTENT_PARAM = 
+        "JAKARTA_BODY_CONTENT_PARAM";
+    private static final String JAKARTA_BODY_CONTENT_PLUGIN = 
+        "JAKARTA_BODY_CONTENT_PLUGIN";
+    private static final String JAKARTA_BODY_CONTENT_TEMPLATE_TEXT = 
+        "JAKARTA_BODY_CONTENT_TEMPLATE_TEXT";
 
     /**
      * The constructor
@@ -949,7 +949,7 @@ class Parser implements TagConstants {
         Node includeNode = new Node.IncludeAction( attrs, start, parent );
         
         parseOptionalBody(includeNode, "jsp:include", 
-			  JAVAX_BODY_CONTENT_PARAM);
+			  JAKARTA_BODY_CONTENT_PARAM);
     }
 
     /*
@@ -963,7 +963,7 @@ class Parser implements TagConstants {
         Node forwardNode = new Node.ForwardAction( attrs, start, parent );
         
         parseOptionalBody(forwardNode, "jsp:forward",
-			  JAVAX_BODY_CONTENT_PARAM);
+			  JAKARTA_BODY_CONTENT_PARAM);
     }
 
     private void parseInvoke(Node parent) throws JasperException {
@@ -1186,7 +1186,7 @@ class Parser implements TagConstants {
     private void parseJspParams(Node parent) throws JasperException {
 	Node jspParamsNode = new Node.ParamsAction(start, parent);
 	parseOptionalBody(jspParamsNode, "jsp:params",
-			  JAVAX_BODY_CONTENT_PARAM );
+			  JAKARTA_BODY_CONTENT_PARAM );
     }
 
     /*
@@ -1208,7 +1208,7 @@ class Parser implements TagConstants {
     private void parseFallBack(Node parent) throws JasperException {
 	Node fallBackNode = new Node.FallBackAction(start, parent);
 	parseOptionalBody(fallBackNode, "jsp:fallback", 
-			  JAVAX_BODY_CONTENT_TEMPLATE_TEXT);
+			  JAKARTA_BODY_CONTENT_TEMPLATE_TEXT);
     }
 
     /*
@@ -1235,7 +1235,7 @@ class Parser implements TagConstants {
 	Node pluginNode = new Node.PlugIn(attrs, start, parent);
         
         parseOptionalBody( pluginNode, "jsp:plugin", 
-            JAVAX_BODY_CONTENT_PLUGIN );
+            JAKARTA_BODY_CONTENT_PLUGIN );
     }
 
     /*
@@ -1837,8 +1837,8 @@ class Parser implements TagConstants {
 			     tag);
             }
         }
-        else if( bodyType == JAVAX_BODY_CONTENT_PLUGIN ) {
-            // (note the == since we won't recognize JAVAX_* 
+        else if( bodyType == JAKARTA_BODY_CONTENT_PLUGIN ) {
+            // (note the == since we won't recognize JAKARTA_* 
             // from outside this module).
             parsePluginTags(parent);
             if( !reader.matchesETag( tag ) ) {
@@ -1848,8 +1848,8 @@ class Parser implements TagConstants {
         }
         else if( bodyType.equalsIgnoreCase( TagInfo.BODY_CONTENT_JSP ) ||
             bodyType.equalsIgnoreCase( TagInfo.BODY_CONTENT_SCRIPTLESS ) ||
-            (bodyType == JAVAX_BODY_CONTENT_PARAM) ||
-            (bodyType == JAVAX_BODY_CONTENT_TEMPLATE_TEXT) )
+            (bodyType == JAKARTA_BODY_CONTENT_PARAM) ||
+            (bodyType == JAKARTA_BODY_CONTENT_TEMPLATE_TEXT) )
         {
             while (reader.hasMoreInput()) {
                 if (reader.matchesETag(tag)) {
@@ -1874,13 +1874,13 @@ class Parser implements TagConstants {
                 {
                     parseElementsScriptless( parent );
                 }
-                else if( bodyType == JAVAX_BODY_CONTENT_PARAM ) {
-                    // (note the == since we won't recognize JAVAX_* 
+                else if( bodyType == JAKARTA_BODY_CONTENT_PARAM ) {
+                    // (note the == since we won't recognize JAKARTA_* 
                     // from outside this module).
                     reader.skipSpaces();
                     parseParam( parent );
                 }
-		else if (bodyType == JAVAX_BODY_CONTENT_TEMPLATE_TEXT) {
+		else if (bodyType == JAKARTA_BODY_CONTENT_TEMPLATE_TEXT) {
 		    parseElementsTemplateText(parent);
 		}
             }
@@ -1980,7 +1980,7 @@ class Parser implements TagConstants {
 	    return TagInfo.BODY_CONTENT_JSP;
 	}
 
-	return JAVAX_BODY_CONTENT_TEMPLATE_TEXT;
+	return JAKARTA_BODY_CONTENT_TEMPLATE_TEXT;
     }
 
     private void parseTagFileDirectives(Node parent)

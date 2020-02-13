@@ -710,7 +710,7 @@ public class Compiler {
             Double version = 
                 Double.valueOf(System.getProperty("java.specification.version"));
             if (!disablejsr199 &&
-                   (version >= 1.6 || getClassFor("javax.tools.Tool") != null)) {
+                   (version >= 1.6 || getClassFor("jakarta.tools.Tool") != null)) {
                 // JDK 6 or bundled with jsr199 compiler
                 javaCompiler = new Jsr199JavaCompiler();
             } else {

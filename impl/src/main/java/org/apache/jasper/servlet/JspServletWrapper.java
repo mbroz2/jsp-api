@@ -26,14 +26,14 @@ import java.net.URL;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.SingleThreadModel;
-import javax.servlet.UnavailableException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.SingleThreadModel;
+import jakarta.servlet.UnavailableException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.jsp.tagext.TagInfo;
 
 import org.glassfish.jsp.api.JspProbeEmitter;
@@ -372,7 +372,7 @@ public class JspServletWrapper {
 
         } catch (UnavailableException ex) {
             String includeRequestUri = (String)
-                request.getAttribute("javax.servlet.include.request_uri");
+                request.getAttribute("jakarta.servlet.include.request_uri");
             if (includeRequestUri != null) {
                 // This file was included. Throw an exception as
                 // a response.sendError() will be ignored by the
@@ -441,7 +441,7 @@ public class JspServletWrapper {
 
         ctxt.incrementRemoved();
         String includeRequestUri = (String)
-            request.getAttribute("javax.servlet.include.request_uri");
+            request.getAttribute("jakarta.servlet.include.request_uri");
         if (includeRequestUri != null) {
             // This file was included. Throw an exception as
             // a response.sendError() will be ignored by the

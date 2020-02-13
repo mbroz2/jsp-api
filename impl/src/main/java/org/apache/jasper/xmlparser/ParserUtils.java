@@ -26,14 +26,14 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.security.AccessController;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.XMLConstants;
+import jakarta.xml.parsers.DocumentBuilder;
+import jakarta.xml.parsers.DocumentBuilderFactory;
+import jakarta.xml.parsers.ParserConfigurationException;
+import jakarta.xml.transform.dom.DOMSource;
+import jakarta.xml.transform.stream.StreamSource;
+import jakarta.xml.validation.Schema;
+import jakarta.xml.validation.SchemaFactory;
+import jakarta.xml.XMLConstants;
 
 import org.apache.jasper.Constants;
 import org.apache.jasper.JasperException;
